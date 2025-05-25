@@ -3,12 +3,43 @@
  */
 package org.example;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import java.util.Date;
 
+import org.example.classBulder.ItemBuilder;
+import org.example.dao.ItemDaoImpl;
+import org.example.dao.UserDaoImpl;
+import org.example.model.Item;
+import org.example.model.User;
+import org.example.telegram.Bot;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.example.interfaces.DefaultDao;
+
+@SpringBootApplication
+public class App {
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        // Item item = new ItemBuilder()
+        // .withName("Math")
+        // .withDayDeadLine(new Date(12-9-2025))
+        // .withStatuse(1)
+        // .withComment("-")
+        // .withPriority(3)
+        // .build();
+
+        // System.out.println(item.getName());
+
+        // DefaultDao<User> userDao = new UserDaoImpl();
+        // DefaultDao<Item> itemDao = new ItemDaoImpl();
+
+        // User user1 = new User("Mark", "1234");
+        // Item item1 = new Item("Math", new Date(12-9-2025), 1, "-", 3, user1);
+
+        // userDao.save(user1);
+        // itemDao.save(item1);
+
+        SpringApplication.run(App.class, args);
+        Bot myBot = new Bot();
+
+        // myBot.init();
     }
 }
