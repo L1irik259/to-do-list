@@ -1,6 +1,7 @@
 package org.example.dao;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 import javax.swing.JOptionPane;
 
@@ -9,7 +10,9 @@ import org.example.model.Item;
 import org.example.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.springframework.stereotype.Repository;
 
+@Repository 
 public class ItemDaoImpl implements DefaultDao<Item> {
     @Override
     public Item save(Item item) {

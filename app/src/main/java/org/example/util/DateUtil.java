@@ -26,7 +26,7 @@ public class DateUtil {
         for (String format : DATE_FORMATS) {
             try {
                 SimpleDateFormat sdf = new SimpleDateFormat(format);
-                sdf.setLenient(false); // Строгая проверка формата
+                sdf.setLenient(false);
                 return sdf.parse(dateString.trim());
             } catch (ParseException e) {
                 // Пробуем следующий формат

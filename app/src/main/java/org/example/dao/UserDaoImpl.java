@@ -7,7 +7,9 @@ import org.example.model.User;
 import org.example.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.springframework.stereotype.Repository;
 
+@Repository 
 public class UserDaoImpl implements DefaultDao<User> {
 
     @Override
