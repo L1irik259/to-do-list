@@ -40,6 +40,15 @@ public class Item {
     @JoinColumn(name = "user_item")
     private User user;
 
+    public Item () {
+        this.name = null;
+        this.dayDeadLine = null;
+        this.status = 0;
+        this.comment = null;
+        this.priority = 0;
+        this.chatId = null;
+    }
+
     public Item (ItemBuilder itemBuilder) { 
         this.name = itemBuilder.getName();
         this.dayDeadLine = itemBuilder.getDayDeadLine();

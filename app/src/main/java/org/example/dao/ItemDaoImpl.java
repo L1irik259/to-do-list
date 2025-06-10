@@ -111,7 +111,7 @@ public class ItemDaoImpl implements DefaultDao<Item> {
         List<Item> items = null;
         try {
             session = HibernateUtil.getSessionFactory().openSession();
-            items = session.createQuery("FROM Cat", Item.class).list();
+            items = session.createQuery("FROM Item", Item.class).list();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getMessage(), "Get all error", JOptionPane.OK_OPTION);
         } finally {
